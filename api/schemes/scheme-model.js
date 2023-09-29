@@ -146,7 +146,7 @@ async function findSteps(scheme_id) { // EXERCISE C
       .leftJoin('steps as st', 'sc.scheme_id', 'st.scheme_id')
       //filter
       .where('sc.scheme_id', scheme_id)
-      .select('step_id', 'step_number', 'instructions', 'sc.scheme_id')
+      .select('step_id', 'step_number', 'instructions', 'sc.scheme_id', 'scheme_name')
       .orderBy('step_number')
   
   //if there aren't any steps, return an empty array 
